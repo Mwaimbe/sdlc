@@ -446,7 +446,7 @@ Show the current list of remote repositories that are connected to your local Gi
 git remote -v
 ```
 
-git remote add origin <https://github.com/....git>
+git remote add origin <url>
 
 Adds remote origin
 
@@ -461,7 +461,11 @@ git push -u origin main
 git push -u origin main
 ```
 
-git remote remove origin
+git remote remove <name>
+```bash
+ git remote remove Mwaimbe/napa
+
+```
 
 git remote set-url origin <new url>
 ```bash
@@ -501,6 +505,35 @@ verify ssh
 
 ssh -T git@github.com
 ```
+
+
+git clone <url> <dirname>
+
+
+
+
+git fetch
+
+git pull
+
+git push
+
+fork
+
+rebase
+
+merge
+
+issues
+
+gists
+
+
+ls -l
+
+cd <dir>
+cd ..
+
 
 
 
