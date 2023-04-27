@@ -461,7 +461,13 @@ git push -u origin main
 git push -u origin main
 ```
 
+git remote remove origin
 
+git remote set-url origin <new url>
+```bash
+git remote set-url origin git@github.com:Mwaimbe/sdlc.git
+
+```
 
 SSH keys
 SSH or Secure Shell is a network communication protocol that enables two computers to communicate
