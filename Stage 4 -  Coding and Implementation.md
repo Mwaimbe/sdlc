@@ -42,12 +42,13 @@ Project Name : <PROJECT_NAME>
 ## Setup
 https://nextjs.org/docs/getting-started
 
+```bash
 npx create-next-app@13.3.1
-
+```
 or 
-
+```bash
 npx create-next-app@latest
-
+```
 
 √ What is your project named? ... <project_name>
 √ Would you like to use TypeScript with this project? » No
@@ -434,16 +435,15 @@ settings
 
 git/github workflow
 
-1. create a github repo - should match local repo
+1. create a github repo - should match local repo, should be empty
 2. Link a local repository to the github repo
 3. Push to the remote repo
 
 git remote -v
 Show the current list of remote repositories that are connected to your local Git repository. The -v option stands for "verbose" and is used to display more detailed information about each remote repository.
-```bash
 
+```bash 
 git remote -v
-
 ```
 
 git remote add origin <https://github.com/....git>
@@ -459,6 +459,41 @@ git push -u origin main
 
 ```bash
 git push -u origin main
+```
+
+
+
+SSH keys
+SSH or Secure Shell is a network communication protocol that enables two computers to communicate
+
+
+local
+create dir ssh
+```bash
+ssh-keygen -t rsa -C "<your email>"
+```
+Enter file.... <Enter>
+Enter passphrase <recomended>
+
+Your identification has been saved in /c/Users/hp/.ssh/id_rsa
+Your public key has been saved in /c/Users/hp/.ssh/id_rsa.pub
+
+
+
+show the file
+
+```bash
+ls -al
+
+```
+public
+copy file contents of id_rsa.pub
+
+verify ssh
+
+```bash
+
+ssh -T git@github.com
 ```
 
 
