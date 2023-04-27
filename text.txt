@@ -1,0 +1,5 @@
+Hi there
+----new feature
+
+still on the main branch
+conflict resolution - bad branch
