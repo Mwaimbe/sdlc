@@ -150,7 +150,7 @@ git commit  -a
 ```
 
 git commit -am "message"
-
+Express commit
 ```bash
 git commit  -am "your commit message"
 
@@ -343,6 +343,10 @@ git merge <branch_you_want_to_merge_to_the_main>
 git branch -d <branch>
 deletes a branch
 
+```bash
+git branch -d <branch>
+```
+
 
 
 conflict resolution
@@ -508,15 +512,55 @@ ssh -T git@github.com
 
 
 git clone <url> <dirname>
+Create a local copy
+<dirname> optional - Name of the folder to be created and files copied to
 
+```bash
+git clone git@github.com:The-shark/OneOffTransactions.git oneofftransactions
+```
 
 
 
 git fetch
+Download contents from a remote repository
+
+
+```bash
+git fetch
+```
+
+git fetch -p
+Remove any references to non existent branches
+
+```bash
+git fetch -p
+```
 
 git pull
+update your local branch from a remote repository
+Preferrable
+
+```bash
+git pull
+```
+
 
 git push
+```bash
+git push
+```
+
+git push --set-upstream origin revised
+```bash
+git push --set-upstream origin revised
+```
+
+pull requests
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+
+Mwaimbe wants to merge 3 commits into development from revised
+
+
 
 fork
 
@@ -524,7 +568,7 @@ rebase
 
 merge
 
-issues
+issuesu
 
 gists
 
@@ -557,7 +601,7 @@ Example
 }
 ```
 
-## Layout
+## Layouts
 https://nextjs.org/docs/basic-features/layouts
 
 Single Shared Layout
@@ -709,6 +753,11 @@ export default function Home() {
     navigate between pages in your Next.js application.
 -   Can only be used within a functional component or a custom hook.
 -   useRouter returns an object
+-   Add active class
+-   
+  ```javascript
+      className={`${router.pathname === '/' ? 'active' :''} flex flex-row items-center h-10`}
+  ```
 
 
 ## 404 - Page Not Found
