@@ -19,3 +19,10 @@ Complete detail of the interface
 Addresses all types of dependency issues
 Listing of error messages
 Complete input and outputs for every module
+
+
+Phase
+Activity
+Tasks
+Est. Time
+
