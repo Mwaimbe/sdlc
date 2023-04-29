@@ -143,6 +143,7 @@ git commit
 
 git commit -a 
 Express commits to a repository without staging. -a stands for all. All changes are committed.Opens the editor. remmoves any deleted files from the commit.Untracked files will not be added
+opens default editor
 
 ```bash
 git commit  -a 
@@ -315,6 +316,12 @@ See the branches
 ```bash
 git branch
 ```
+git branch -a
+
+```bash
+git branch -a
+```
+
 
 git checkout -b  <new_branch>
 create a new branch
@@ -329,6 +336,8 @@ switch to a specified branch
 git checkout <branch>
 
 ```
+
+
 
 git merge <branch_you_want_to_merge_to_the_main>
 first switch to the parent branch e.g main/master using the git checkout main command
@@ -347,6 +356,11 @@ deletes a branch
 git branch -d <branch>
 ```
 
+git push origin :<branch>
+deletes a remote branch
+```bash
+git push origin :admin
+```
 
 
 conflict resolution
@@ -363,11 +377,44 @@ conflict resolution - bad branch
 
 ```
 
+## Tags
 
-tags
-git tag -a v1.0 -m "Release 1.0"
+https://absagroup.udemy.com/course/github-ultimate/learn/lecture/4732050#overview
+
+git tag -a <tag_name> -m "<message>" <hash>
+
+```bash
+git tag -a v1.0 -m "Release 1.0" d4112ew
+```
 
 git tag --list
+```bash
+git tag --list
+```
+
+git push origin <tag_name>
+
+
+git push  --tags
+
+## update tags  floating tags
+
+git tag -f <tag_name> <hash>
+
+git push  --force origin <tag_name>
+
+
+## Releases
+
+
+
+stable
+v0.1-alpha
+v0.5-beta
+Release 1.0
+
+
+
 
 stashing
 git stash
@@ -565,6 +612,11 @@ Mwaimbe wants to merge 3 commits into development from revised
 fork
 
 rebase
+The git rebase command allows you to easily change a series of commits, modifying the history of your repository. You can reorder, edit, or squash commits together. Typically, you would use git rebase to: Edit previous commit messages. Combine multiple commits into one.
+
+```bash
+git pull --rebase
+```
 
 merge
 
@@ -577,6 +629,31 @@ ls -l
 
 cd <dir>
 cd ..
+
+
+git mergetool
+conflict while pulling
+```bash
+git mergetool
+```
+
+default branch
+- 
+
+branches
+- main
+- develop
+        - new feature
+        - theme
+
+
+
+
+
+
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
 
 
 
@@ -1039,11 +1116,26 @@ npm install react-query
 ##### fetch 
 
 
-#### Loading and Error States
--  create loading.js file inside app folder
--  Works in app folder??
-https://absagroup.udemy.com/course/the-nextjs-13-bootcamp-the-complete-developer-guide/learn/lecture/36031674#overview
+#### Loading/Progress
+https://www.npmjs.com/package/nextjs-progressbar
 
+npm i nextjs-progressbar
+
+```javascript
+//pages/_app.js
+
+import NextNProgress from 'nextjs-progressbar';
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <NextNProgress color="#ff0000" />
+      <Component {...pageProps} />;
+    </>
+  );
+}
+
+```
 
 #### Fallback: blocking
 - getStaticPaths
