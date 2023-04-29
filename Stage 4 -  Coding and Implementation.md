@@ -696,12 +696,19 @@ branches
         - theme
 
 
-
+collaborators
+have full access
+repo > settings > collaborators
 
 
 
   (use "git add/rm <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
+
+### Issue tracking
+
+
+
 
 
 
@@ -1291,7 +1298,7 @@ export default function MyApp({ Component, pageProps }) {
 
 
 ## Themes
-
+https://www.youtube.com/watch?v=Uz35Qiia84g
 
 
 
