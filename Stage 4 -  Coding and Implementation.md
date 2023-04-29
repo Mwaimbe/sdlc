@@ -1,6 +1,8 @@
 
 Project Name : <PROJECT_NAME>
-
+VS code shortcuts
+react functional component
+rfc
 
 # STAGE 4 : CODING AND IMPLEMENTATION
 
@@ -284,8 +286,11 @@ git reset HEAD <file>
  ```bash 
  git restore <file>
  ```
+ (use "git restore --staged <file>..." to unstage)
 
- 
+ git reset HEAD <file>
+to unstage
+
 git mv <old_file> <new_file>
 rename file
 You also need to commit
@@ -497,13 +502,16 @@ Show the current list of remote repositories that are connected to your local Gi
 git remote -v
 ```
 
-git remote add origin <url>
-
-Adds remote origin
-
+git remote add <name> <url>
+-- adds origin
 ```bash
 git remote add origin https://github.com/Mwaimbe/sdlc.git
 ```
+or - adds upstream 
+```bash
+git remote add upstream https://github.com/Mwaimbe/sdlc.git
+```
+
 
 git push -u origin main
 
@@ -603,13 +611,52 @@ git push --set-upstream origin revised
 ```
 
 pull requests
-Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. 
+Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 
 Mwaimbe wants to merge 3 commits into development from revised
 
 
 
 fork
+A fork is a new repository that shares code and visibility settings with the original “upstream” repository. 
+Forks are often used to iterate on ideas or changes before they are proposed back to the upstream repository, such as in open source projects or when a user does not have write access to the upstream repository.
+
+github
+go to the project you want to fork 
+fork
+
+go to your account and clone
+```bash
+git clone git@github.com:The-shark/CarBid.git
+```
+
+local
+create your own branch
+
+git checkout -b <newfeature>
+
+---make your contributions---
+
+push
+```bash
+git push -u origin newfeature
+```
+
+ Create pull request
+ on github click on compare and pull request or Contribute
+
+accept pull request
+-done on github
+
+synchronise changes back to your fork
+git pull origin <branch>
+```bash
+git pull origin master
+```
+
+enlist help with collaborators
+
 
 rebase
 The git rebase command allows you to easily change a series of commits, modifying the history of your repository. You can reorder, edit, or squash commits together. Typically, you would use git rebase to: Edit previous commit messages. Combine multiple commits into one.
@@ -617,6 +664,8 @@ The git rebase command allows you to easily change a series of commits, modifyin
 ```bash
 git pull --rebase
 ```
+
+## pull request
 
 merge
 
@@ -961,6 +1010,18 @@ import Dropzone from "react-dropzone";
 ---
 react-icons
 
+https://react-icons.github.io/react-icons/icons?name=fa
+
+https://mui.com/material-ui/icons/
+
+npm install @mui/icons-material
+
+
+
+
+
+https://mui.com/material-ui/getting-started/overview/
+
 ---
 ## CONNECTING & WORKING WITH THE DATABASE
 ---
@@ -1114,6 +1175,12 @@ npm install react-query
 
 
 ##### fetch 
+
+
+### Skeleton loading div
+https://www.section.io/engineering-education/skeleton-loading-in-nextjs-with-tailwindcss/
+
+
 
 
 #### Loading/Progress
