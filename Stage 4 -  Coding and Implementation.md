@@ -10,9 +10,11 @@ rfc
 
 1. User Interface
    How users will consume and interact with your application.
-   React, Tailwind,Formik,Yup,Django (Admin),React-toastify
+   React, Tailwind,Formik,Yup,Django (Admin),React-toastify,primereact,plotly js
    https://react.dev/
    https://tailwindcss.com/
+   https://primereact.org/
+   https://plotly.com/javascript/getting-started/
 
 2. Routing
    How users navigate between different parts of your application.
@@ -83,6 +85,46 @@ version
 git -v
 
 ```
+
+#### git and github workflow
+
+Git is a distributed version control system used to track changes in software code over time. GitHub is a web-based hosting service for Git repositories. GitHub allows users to collaborate on projects, share code, and contribute to open-source projects.
+
+Here is a typical workflow for using Git and GitHub:
+
+Create a new repository:
+Create a new repository on GitHub or use the Git command line to create a new local repository.
+
+Clone the repository:
+Clone the repository to your local machine using the Git command line.
+
+Make changes to the code:
+Make changes to the code on your local machine using your preferred code editor.
+
+Stage changes:
+Use the Git command line to stage the changes you want to commit.
+
+Commit changes:
+Use the Git command line to commit the staged changes with a commit message that briefly describes the changes.
+
+Push changes:
+Use the Git command line to push the committed changes to the remote repository on GitHub.
+
+Review changes:
+Review changes in the GitHub interface or using Git command line tools.
+
+Pull changes:
+If other team members have made changes to the code, use the Git command line to pull those changes to your local machine.
+
+Resolve conflicts:
+If there are conflicts between your changes and changes made by other team members, use the Git command line to resolve the conflicts.
+
+Repeat:
+Continue making changes, staging, committing, and pushing to the repository, collaborating with other team members using Git and GitHub.
+
+This workflow is just an overview and there are many more advanced features and commands that can be used in Git and GitHub. It's also important to follow best practices, such as making small, frequent commits with descriptive commit messages, and regularly pulling changes to ensure everyone is working with the latest code.
+
+
 
 git status
 
@@ -408,6 +450,13 @@ git tag -f <tag_name> <hash>
 
 git push  --force origin <tag_name>
 
+#### multiple remote
+git remote add origin <url1>
+git remote add upstream <url2>
+
+you can use
+git fetch --all
+
 
 ## Releases
 
@@ -512,6 +561,10 @@ or - adds upstream
 git remote add upstream https://github.com/Mwaimbe/sdlc.git
 ```
 
+git remote rm origin
+```bash
+git remote rm origin
+```
 
 git push -u origin main
 
@@ -538,6 +591,7 @@ SSH or Secure Shell is a network communication protocol that enables two compute
 
 local
 create dir ssh
+use vs code
 ```bash
 ssh-keygen -t rsa -C "<your email>"
 ```
@@ -578,6 +632,13 @@ git clone git@github.com:The-shark/OneOffTransactions.git oneofftransactions
 
 git fetch
 Download contents from a remote repository
+git fetch is a Git command that retrieves changes from a remote repository without integrating them into the local branch. It is useful for keeping the local repository up-to-date with the changes made in the remote repository.
+
+When you run git fetch, Git retrieves the latest changes from the remote repository and updates the remote tracking branch, which is a local reference that tracks the state of the remote repository. This allows you to see the changes made in the remote repository without modifying your local branch.
+
+After running git fetch, you can review the changes made in the remote repository using tools like git diff or git log. If you want to integrate the changes into your local branch, you can use commands like git merge or git rebase.
+
+Note that git fetch only retrieves changes from the remote repository, it does not modify any of your local files. To update your local files with the changes from the remote repository, you need to run additional commands such as git merge or git rebase.
 
 
 ```bash
@@ -621,6 +682,18 @@ Mwaimbe wants to merge 3 commits into development from revised
 fork
 A fork is a new repository that shares code and visibility settings with the original “upstream” repository. 
 Forks are often used to iterate on ideas or changes before they are proposed back to the upstream repository, such as in open source projects or when a user does not have write access to the upstream repository.
+
+
+
+In the context of version control systems like Git, a fork and a clone refer to two different concepts:
+
+Fork: A fork is a copy of a repository in a version control system, typically hosted on a different platform or account. When you fork a repository, you create your own copy of it that you can modify independently of the original. This is often used when you want to contribute to someone else's project on a hosting platform like GitHub, but don't have direct write access to the original repository.
+
+Clone: Cloning a repository means creating a local copy of it on your own computer. When you clone a repository, you download a complete copy of all the files and history associated with that repository. This allows you to work on the code or files locally, make changes, and then push those changes back up to the original repository or to your own fork.
+
+In summary, while both fork and clone create copies of a repository, a fork creates a new independent copy on a different platform or account, while a clone creates a local copy on your own computer.
+
+
 
 github
 go to the project you want to fork 
@@ -706,6 +779,49 @@ repo > settings > collaborators
   (use "git restore <file>..." to discard changes in working directory)
 
 ### Issue tracking
+
+git hub
+
+Issues are used to track todos, bugs, feature requests, and more. As issues are created, they’ll appear here in a searchable and filterable list. To get started, you should create an issue.
+
+labels
+milestones
+
+##### Associating issues with commits
+Issue: Sidebar overflow hover distortion #2
+
+
+```bash
+git commit -m 'Sidebar hover distortion,close #2'
+```
+then push to github
+
+@Mwaimbe Mwaimbe closed this as completed in 48e8c60 8 minutes ago
+
+
+#### Gist
+In GitHub, a "gist" is a simple way to share code snippets, notes, and other small pieces of text with others. It allows you to quickly and easily create and share snippets of code without having to create a full-fledged repository.
+
+Instantly share code, notes, and snippets.
+
+
+
+
+##### local gist
+git clone git@gist.github.com:fefa2b5b54f0f4d5943ae8b08c0f6d71.git <name>
+```bash
+git clone git@gist.github.com:fefa2b5b54f0f4d5943ae8b08c0f6d71.git palletes
+```
+
+##### sharing gists
+
+use url
+
+
+
+### github organizations
+
+
 
 
 
@@ -940,21 +1056,36 @@ Yup
 tailwind
 
 
+#### TeXT Editor
+
+
+https://primereact.org/editor/
+
+
+
+
 
 
 ## Components
 
-- multi-select
-- datepicker
-- textarea with ckeditor
-- spinners
-- buttons
-- tables- filter tables
-- filter/search
-- input
-- 
+https://primereact.org/
 
 
+## Tables
+
+
+
+DataGrid
+https://mui.com/material-ui/react-table/
+
+https://mui.com/x/react-data-grid/events/
+
+
+
+#### Graph
+https://plotly.com/javascript/getting-started/
+
+npm install react-plotly.js plotly.js
 
 
 ---
